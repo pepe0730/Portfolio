@@ -82,6 +82,7 @@ ul {
   background-size: cover;
   height: 700px;
   color: white;
+  text-shadow: 2px 2px rgb(46, 46, 46);
   width: 100%;
   flex-direction: column;
   align-items: center;
@@ -91,6 +92,8 @@ ul {
     margin-top: 20px;
     letter-spacing: 3px;
   }
+
+
 }
 
 
@@ -143,6 +146,7 @@ h2 {
   background-size: cover;
   background-attachment: fixed;
   color: white;
+  text-shadow: 2px 2px rgb(46, 46, 46);
   padding: 1px 40px 40px 40px;
 }
 
@@ -335,6 +339,7 @@ footer {
     text-align: center;
     width: 100%;
     display: none;
+    z-index: 10;
     ul {
       margin-top: 100px;
       li {
@@ -351,7 +356,7 @@ footer {
   #top-page {
     background-image: none;
     background-attachment: normal;
-    height: 650px;
+    height: 100vh;
   }
 
   // ios parallax
@@ -359,14 +364,14 @@ footer {
     position: fixed;
     top: 0;
     left: 0;
-    bottom: 40%;
+    bottom: 0;
     height: 0;
-    padding-top: 175%;
-    z-index: -1;
+    padding-top: 300%;
+    z-index: -10;
     content: "";
     width:100%;
     background-image: url(../img/mobile_sm__3.png);
-    background-size: contain;
+    background-size: 125%;
   }
 
   #top-page h1, #top-page h3 {
@@ -483,6 +488,10 @@ footer {
 
   .introduction_item {
     width: 100%;
+  }
+
+  footer {
+    background-color: rgb(220, 220, 220);
   }
 }
 

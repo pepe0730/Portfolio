@@ -103,6 +103,7 @@ ul {
   background-size: cover;
   height: 700px;
   color: white;
+  text-shadow: 2px 2px #2e2e2e;
   width: 100%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -185,6 +186,7 @@ h2 {
   background-size: cover;
   background-attachment: fixed;
   color: white;
+  text-shadow: 2px 2px #2e2e2e;
   padding: 1px 40px 40px 40px;
 }
 
@@ -393,6 +395,7 @@ footer {
     text-align: center;
     width: 100%;
     display: none;
+    z-index: 10;
   }
   .slide-menu ul {
     margin-top: 100px;
@@ -408,20 +411,20 @@ footer {
   #top-page {
     background-image: none;
     background-attachment: normal;
-    height: 650px;
+    height: 100vh;
   }
   #top-page:before {
     position: fixed;
     top: 0;
     left: 0;
-    bottom: 40%;
+    bottom: 0;
     height: 0;
-    padding-top: 175%;
-    z-index: -1;
+    padding-top: 300%;
+    z-index: -10;
     content: "";
     width: 100%;
     background-image: url(../img/mobile_sm__3.png);
-    background-size: contain;
+    background-size: 125%;
   }
   #top-page h1, #top-page h3 {
     margin-right: 20px;
@@ -519,6 +522,9 @@ footer {
   }
   .introduction_item {
     width: 100%;
+  }
+  footer {
+    background-color: gainsboro;
   }
 }
 /*# sourceMappingURL=styles.css.map */

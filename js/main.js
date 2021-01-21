@@ -1,25 +1,3 @@
-//header scroll
-var _window = $(window),
-    header = $('header'),
-    toppageBottom,
-    startPos,
-    winScrollTop;
-  
-_window.on('scroll', function() {
-  winScrollTop = $(this).scrollTop(); 
-  toppageBottom = 700;
-  if (winScrollTop >= startPos) {
-    if (winScrollTop >= toppageBottom) {
-      header.addClass('hide');
-    }
-  } else {
-    header.removeClass('hide');
-  }
-  //次回のスクロール時、前回のスクロールの値として動く
-  startPos = winScrollTop;
-});
-
-
 // header mobile menu
 var $menuBtn = $('#menu-btn'),
     $slideMenu = $('#slide-menu');
@@ -35,6 +13,29 @@ $menuBtn.on('click', function (e) {
     $slideMenu.addClass('active');
   }
 })
+
+//header scroll
+var _window = $(window),
+    header = $('header'),
+    toppageBottom,
+    startPos,
+    winScrollTop;
+  
+_window.on('scroll', function() {
+  winScrollTop = $(this).scrollTop(); 
+  toppageBottom = 700;
+  if (winScrollTop >= startPos) {
+    if (winScrollTop >= toppageBottom) {
+      if (!$slideMenu.hasClass('active')) {
+        header.addClass('hide');
+      }
+    }
+  } else {
+    header.removeClass('hide');
+  }
+  startPos = winScrollTop;
+});
+
 
 //toppage typewriter
 const typewriter = (param) => {
@@ -81,7 +82,3 @@ _nav3.on('click', function() {
   move = $("" +  _nav3.attr("href") + "").offset().top - 150;
   $('html, body').animate({scrollTop: move}, 700);
 })
-
-
-// mobile side-menu
-
